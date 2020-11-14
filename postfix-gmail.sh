@@ -32,4 +32,4 @@ cat /etc/ssl/certs/thawte_Primary_Root_CA.pem | sudo tee -a /etc/postfix/cacert.
 systemctl restart postfix.service
 
 # test
-mail -s 'OFF' youremail@mail.com <<< $(date '+%H:%M:%S - %d/%m/%Y')
+# mail -s 'TESTE' youremail@mail.com <<< $(date '+%H:%M:%S - %d/%m/%Y')
