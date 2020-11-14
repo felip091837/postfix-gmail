@@ -1,10 +1,14 @@
 #!/bin/bash
 
+# felipesi - 2020
+
 # need allow 
 # https://myaccount.google.com/lesssecureapps?gar=1
 
 # issue 'SASL failed'
 # https://accounts.google.com/b/0/DisplayUnlockCaptcha
+
+# tested on Ubuntu 20.04 aws
 
 if [ "$EUID" -ne 0 ]; then
 	echo "Please run as root"
