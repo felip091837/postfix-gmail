@@ -15,6 +15,9 @@ if [ "$EUID" -ne 0 ]; then
 	exit
 fi
 
+account='youremail@gmail.com'
+password='PASSWORD'
+
 apt update -y
 apt install postfix mailutils libsasl2-2 ca-certificates libsasl2-modules -y
 
@@ -28,7 +31,7 @@ smtp_use_tls = yes
 EOT
 
 cat <<EOT > /etc/postfix/sasl_passwd
-[smtp.gmail.com]:587 youremail@gmail.com:PASSWORD
+[smtp.gmail.com]:587 $account:$password
 EOT
 
 chmod 400 /etc/postfix/sasl_passwd
