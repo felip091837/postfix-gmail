@@ -8,7 +8,7 @@
 # issue 'SASL failed'
 # https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
-# tested on Ubuntu 20.04 aws
+# tested on 'Ubuntu Server 20.04' aws
 
 if [ "$EUID" -ne 0 ]; then
 	echo "Please run as root"
