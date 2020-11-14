@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# need allow 
+# https://myaccount.google.com/lesssecureapps?gar=1
+
 # issue 'SASL failed'
 # https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
