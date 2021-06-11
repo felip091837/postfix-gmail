@@ -1,14 +1,17 @@
 #!/bin/bash
 
 # felipesi - 2020
+# tested on 'Ubuntu Server 20.04' aws
 
-# need allow 
-# https://myaccount.google.com/lesssecureapps?gar=1
+# logs
+# sudo tail /var/log/mail.log
+
+# issue 'Username and Password not accepted'
+# https://myaccount.google.com/lesssecureapps
 
 # issue 'SASL failed'
 # https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
-# tested on 'Ubuntu Server 20.04' aws
 
 if [ "$EUID" -ne 0 ]; then
 	echo "Please run as root"
