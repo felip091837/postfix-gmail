@@ -37,9 +37,10 @@ EOT
 chmod 400 /etc/postfix/sasl_passwd
 postmap /etc/postfix/sasl_passwd
 
+wget https://www.thawte.com/roots/thawte_Primary_Root_CA.pem -O /etc/ssl/certs/thawte_Primary_Root_CA.pem
 cat /etc/ssl/certs/thawte_Primary_Root_CA.pem | sudo tee -a /etc/postfix/cacert.pem
 
-systemctl restart postfix.service
+systemctl reload postfix
 
 # send test
-# mail -s 'TESTE' youremail@mail.com <<< $(date '+%H:%M:%S - %d/%m/%Y')
+# mail -s 'TESTE' youremail@mail.com <<< $(date '+%H:%M:%S - %d/%m/%Y') && echo 'SENDING TEST!'
