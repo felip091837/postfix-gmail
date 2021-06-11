@@ -9,7 +9,7 @@
 # issue 'Username and Password not accepted'
 # https://myaccount.google.com/lesssecureapps
 
-# issue 'SASL failed'
+# issue 'SASL authentication failed'
 # https://accounts.google.com/b/0/DisplayUnlockCaptcha
 
 
