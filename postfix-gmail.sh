@@ -40,7 +40,7 @@ EOT
 chmod 400 /etc/postfix/sasl_passwd
 postmap /etc/postfix/sasl_passwd
 
-wget https://www.thawte.com/roots/thawte_Primary_Root_CA.pem -O /etc/ssl/certs/thawte_Primary_Root_CA.pem
+wget -q https://www.thawte.com/roots/thawte_Primary_Root_CA.pem -O /etc/ssl/certs/thawte_Primary_Root_CA.pem
 cat /etc/ssl/certs/thawte_Primary_Root_CA.pem | sudo tee -a /etc/postfix/cacert.pem
 
 systemctl reload postfix
