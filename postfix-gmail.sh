@@ -26,6 +26,7 @@ apt install postfix mailutils libsasl2-2 ca-certificates libsasl2-modules -y
 
 cat <<EOT > /etc/postfix/main.cf
 relayhost = [smtp.gmail.com]:587
+inet_protocols = ipv4
 smtp_sasl_auth_enable = yes
 smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
 smtp_sasl_security_options = noanonymous
